@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Usuarios ARQUI 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Subir empleados</h2>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${successmessage}">
+                <strong th:text="${successmessage}"> </strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${errormessage}">
+                <strong th:text="${errormessage}"> </strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form action="" th:action="@{'/fileupload'}" th:object="${empleado}" method="post" enctype='multipart/form-data'>
+                <div class="form-group">
+                    <label for="fileupload">Archivo tipo CSV o JSON</label>
+                    <input type="file" class="form-control" id="fileupload" name="file" th:field="*{file}">
+                </div>
+
+                <button type="submit" style="margin-top:5px; margin-bottom:20px" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <h2>Lista de empleados</h2>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha Nacimiento</th>
+                <th>Categoria</th>
+                <th>Fecha ingreso</th>
+                <th>Area</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="empleado: ${empleados}">
+                <td th:text="${empleado.rut}"></td>
+                <td th:text="${empleado.nombre}"></td>
+                <td th:text="${empleado.apellido}"></td>
+                <td th:text="${empleado.fechaNacimiento}"></td>
+                <td th:text="${empleado.categoria}"></td>
+                <td th:text="${empleado.fechaIngreso}"></td>
+                <td th:text="${empleado.areaTrabajo}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" ></script>
+</body>
+</html>
