@@ -1,0 +1,6 @@
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('1','Sanchez','Operacion','A','2021/12/12','1969/10/15','Felipe','12345689-5');
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('2','Flores','Operacion','B','1976/11/10','1950/11/25','Nicolas','13456789-1');
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('3','Alvarez','Operacion','C','1996/10/15','1960/09/05','Javier','9012345-6');
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('4','Espina','Administracion','A','2014/10/22','1990/07/12','Hector','20123456-4');
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('5','Isla','Administracion','B','2000/12/12','1980/12/20','Pablo','9066661-3');
+INSERT INTO `arqsw2`.`empleado` (`id`, `apellido`, `area_trabajo`, `categoria`, `fecha_ingreso`, `fecha_nacimiento`, `nombre`, `rut`) VALUES('6','Gonzalez','Administracion','C','2008/12/12','1988/11/14','Ignacio','10123456-9');
